@@ -1,0 +1,104 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+   background-color: #333333;
+    color: white;
+    margin: 0;
+    background: linear-gradient(#1c3d4b, #30728f);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .time-display {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Makes it a circle */
+    background: linear-gradient(135deg, #ff8801, #edf047); /* Gradient border */
+    padding: 5px; /* Padding for inner content */
+    position: relative; /* To handle inner circle */
+    
+    background-size: 200% 200%; /* Ensure gradient maintains the original effect */
+    background-position: 0% 50%; /* Control the gradient position for consistency */
+  }
+  
+  .buttons {
+    animation: float 3s ease-in-out infinite; /* Apply float animation to buttons */
+  }
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Moves up slightly */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+   .buttons {
+    animation: float 3s ease-in-out infinite;
+  }
+  .time-display::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: rgba(0, 0, 0, 0.5); /* Inner background */
+    border-radius: 50%; /* Inner circle */
+    z-index: -1;
+  }
+  
+  
+  .buttons button {
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #edf047;
+    color: #333;
+    transition: 0.3s;
+  }
+  
+  .buttons button:hover {
+    background-color:#ff8657;
+  }
+  
+  .buttons button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+  }
+  
+  .lap-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+  }
+  
+  .lap-list li {
+    background: rgba(255, 255, 255, 0.2);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+ 
+  h1, p {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.5);
+  }
+  
+ 
+  
